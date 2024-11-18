@@ -1,7 +1,7 @@
 <footer class="mt-5">
         <div>
             <p>
-                2024 Uñas y Glamour Spa. Todos los derechos reservados.
+                2024 Uñas y Glamour Spa. &copy; Todos los derechos reservados.
             </p>
         </div>
 

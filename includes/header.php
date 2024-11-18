@@ -1,7 +1,7 @@
-<header class="wave" id="inicio">
+<header class="wave mb-5" id="inicio">
       <div class="container">
-         <div class="row">
-            <div class="col-md-5 text-white mt-4 ms-md-5 text-center-xs" style="z-index: 1;">
+         <div class="row mt-5 ">
+            <div class="col-md-5 text-white mt-5  ms-md-5 text-center-xs" style="z-index: 1;">
                <h1 class="fw-normal">Elegancia y estilo en cada detalle de tus uñas</h1>
                <p>Transformamos tus uñas en reflejos de estilo y glamour, cuidando cada detalle para una experiencia de belleza única</p>
                <a class="btn-light" href="#portfolio">Mis Trabajos <i

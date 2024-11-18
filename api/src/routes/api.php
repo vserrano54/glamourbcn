@@ -116,6 +116,18 @@ if ($path == "/servicios/todos") {
     }
 }
 
+// Llamada GET para recuperar todas los servicios DESTACADAS de la Base de Datos
+
+if ($path == "/servicios/destacados") {
+    if ($method == "GET") {
+    
+        $servicioController->getServiciosDestacados();
+                             
+    } else {
+        echo $MENSAJE_ERROR_ENDPOINT;
+    }
+}
+
 // Llamada GET para recuperar las servicios paginados para nuestro DataTable
 if (str_contains($path, "/servicios/paginados")) {
     if ($method == "GET") {
@@ -129,14 +141,7 @@ if (str_contains($path, "/servicios/paginados")) {
     }
 }
 
-// Llamada GET para recuperar todas los servicios DESTACADAS de la Base de Datos
-if ($path == "/servicios/destacados") {
-    if ($method == "GET") {
-        $recetaController->getServiciosDestacados();
-    } else {
-        echo $MENSAJE_ERROR_ENDPOINT;
-    }
-}
+
 
 // Llamada GET para recuperar los servicios según filtros que le pasamos
 if (str_contains($path, "/servicios/filtros")) {

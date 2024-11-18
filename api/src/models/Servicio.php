@@ -125,10 +125,10 @@ class Servicio
     }
 
 
-    public function getServicioDestacadas()
+    public function getServiciosDestacados()
     {
         // Se va a conectar a la base de datos y va a hacer la llamada
-        $query = "SELECT * FROM servicio WHERE destacada = 1";
+        $query = "SELECT * FROM servicio WHERE destacado = 1";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();

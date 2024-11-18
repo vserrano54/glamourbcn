@@ -142,7 +142,7 @@ class ServicioController
             echo json_encode(null);
         }
     }
-
+                    
     public function getServiciosDestacados()
     {
         $servicios = $this->servicio->getServiciosDestacados();

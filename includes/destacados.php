@@ -27,6 +27,7 @@
 <script>
     $(function() {
         cargarServiciosDestacados();
+       
     });
 </script>
 

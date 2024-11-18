@@ -1,4 +1,4 @@
-<section id="about" class="about">
+<section id="about" class="about section-bg ">
    <div id="bloque-features" class="px-5 mt-4">
             <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5 px-5">
                 <div class="col d-flex flex-column align-items-start gap-2">

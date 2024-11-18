@@ -1,13 +1,13 @@
 header {
    width: 100%;
-   min-height: 625px;
+   min-height: 800px;
 }
 
 .fondo-main h1 {
    color: #ffffff;
    position: relative;
    /*font-size: 56px;*/
-   top: -100px;
+   top: -150px;
    opacity: 0;
    animation-name: difuminarArriba; /* el nombre de la animacion que usaremos en el keyframes*/
    animation-duration: 1s; /* duración de la animación */
@@ -36,39 +36,13 @@ header {
 .wave {
    position: relative;
    padding-top: 6rem;
-   /*background: linear-gradient(90deg, rgba(245, 225, 225, 1) 0%, rgba(255, 248, 230, 1) 100%);*/
-   /*background: linear-gradient(90deg, rgba(255, 248, 230, 1) 0%, rgba(255, 248, 230, 1) 100%);*/
-
-   /*background: linear-gradient(90deg, rgba(245, 225, 225, 1) 0%, rgba(215, 169, 192, 1) 50%, rgba(183, 110, 121, 1) 100%);*/
-   /*background: linear-gradient(90deg, rgba(215, 169, 192, 1) 0%, rgba(215, 169, 192, 1) 50%, rgba(183, 110, 121, 1) 100%);*/
+ 
    background: linear-gradient(90deg, rgba(183, 110, 121, 1) 0%, rgba(215, 169, 192, 1) 50%, rgba(183, 110, 121, 1) 100%);
 
 
 
 }
 
-.wave:before {
-   content: '';
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 216px;
-   background: url('../img/wave.png');
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.navbar .nav-link {
-   color: #FFFFFF;
-   margin-right: 29px;
-   transition: 0.2s;
-}
-
-a.nav-link:hover {
-   padding-bottom: 3px;
-   border-bottom: 2px solid #FFFFFF;
-}
 
 .btn-light {
    background-color: #FFFFFF; /* Blanco */
@@ -140,7 +114,9 @@ a.nav-link:hover {
  .cargandoServicios p {
    font-size: 1.3rem;
    font-weight: bold;
-   color: #dda15e;
+   color: rgb(200, 117, 129);
+   /* #dda15e;*/
+   
  }
  
  #caracteristicas-servicio {
@@ -150,7 +126,7 @@ a.nav-link:hover {
    position: relative;
    max-width: 100%;
  }
- 
+
  #caracteristicas-servicio .feature-icon p {
    font-size: 4.8rem;
    margin: 0px;
@@ -204,11 +180,7 @@ a.nav-link:hover {
    transition: all 0.6s;
 }
 
-.btn-custom:hover {
-   background: #FD3323;
-   border: 1.5px solid #FD3323;
-   color: #FFFFFF;
-}
+
 
 .navbar-fixed {
    background-color: rgb(200, 117, 129);
@@ -284,7 +256,7 @@ section {
    font-weight: 700;
    margin-bottom: 5px;
    font-size: 20px;
-   color: #FC562C;
+   color: rgb(200, 117, 129);
 }
 
 .about .member .pic {
@@ -337,143 +309,19 @@ section {
 }
 
 .destacados .icon-box .icon i {
-   color: #FCAB44;
+   color: rgb(200, 117, 129);
    font-size: 43px;
 }
 
 .destacados .icon-box h4 {
    margin-bottom: 15px;
-   color: #FC562C;
+   color: rgb(200, 117, 129);
 }
-
-
-/* portfolio */
-
-.portfolio #portfolio-filters li {
-   cursor: pointer;
-   list-style: none;
-   margin: 10px 5px;
-   font-weight: 500;
-   color: #444444;
-   transition: all 0.3s;
-   padding: 5px 20px;
-   border-radius: 50px;
-}
-
-.portfolio #portfolio-filters li:hover,
-.portfolio #portfolio-filters li.filter-active {
-   background: #FC562C;
-   color: #FFFFFF;
-}
-
-.portfolio .portfolio-item .portfolio-img img {
-   transition: all 0.6s;
-}
-
-.portfolio .portfolio-item:hover .portfolio-img img {
-   transform: scale(1.15);
-}
-
-.portfolio .portfolio-item .portfolio-img {
-   overflow: hidden;
-}
-
-.portfolio .portfolio-item .portfolio-info {
-   opacity: 0;
-   position: absolute;
-   left: 12px;
-   bottom: 0;
-   right: 12px;
-   transition: all 0.3s;
-   background: rgba(252, 103, 49, 0.9);
-   padding: 10px 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-   font-size: 18px;
-   color: #FFFFFF;
-   font-weight: 600;
-   margin-bottom: 0px;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-   color: #f9fcfe;
-   font-size: 15px;
-   margin-bottom: 0px;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-   position: absolute;
-   right: 40px;
-   font-size: 30px;
-   top: calc(50% - 28px);
-   color: #FFFFFF;
-   transition: 0.3s;
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-   right: 10px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-   opacity: 1;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-   color: #FCAB44;
-}
-
 
 /* contacto */
 
 iframe {
    max-width: 100%;
-}
-
-
-/* footer */
-
-footer {
-   border-top: 1px solid #7e7e7e;
-   padding-top: 44px;
-}
-
-footer a {
-   text-decoration: none;
-   color: black;
-}
-
-footer .social {
-   background: #FC6731;
-   width: 35px;
-   height: 35px;
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 50%;
-   margin-right: 5px;
-}
-
-footer .social a {
-   color: #FFFFFF;
-}
-
-.go-top {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   position: fixed;
-   bottom: 30px;
-   right: 30px;
-   width: 50px;
-   height: 50px;
-   background: #FC6731;
-   color: #FFFFFF;
-   border-radius: 50%;
-   cursor: pointer;
-   z-index: 1000;
 }
 
 
@@ -524,4 +372,69 @@ footer {
  footer p {
    color: #FFFFFF;
  }
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .custom-navbar {
+   background: linear-gradient(90deg, rgba(200, 117, 129, 1) 100%, rgba(215, 169, 192, 1) 1%, rgba(183, 110, 121, 1) 50%);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+   color: #ffffff !important; /* Color blanco */
+   font-size: 1rem;
+   transition: color 0.3s ease;
+}
+
+.navbar .nav-link {
+   color: #FFFFFF;
+   margin-right: 29px;
+   transition: 0.2s;
+}
+
+a.nav-link:hover {
+   padding-bottom: 3px;
+   border-bottom: 2px solid #FFFFFF;
+}
+
+
+/*
+.navbar-nav .nav-link:hover {
+   color: #ffffff; 
+}
+
+*/
+
+.navbar-brand {
+   color: #ffffff !important; /* Asegura que el texto del logo sea blanco */
+}
+
+.btn-custom {
+   background-color: #ffffff;
+   color: #b76e79;
+   border: 1px solid #b76e79;
+   padding: 0.5rem 1rem;
+   transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+   background-color: #b76e79;
+   color: #ffffff;
+   border-color: #ffffff;
+}
+
+.custom-navbar.scrolled {
+   background-color: rgb(200, 117, 129);
+   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}

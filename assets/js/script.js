@@ -17,6 +17,19 @@ $(window).on("scroll", function() {
 // Aquí arriba definimos las funciones de JS que necesitemos
 
 // Definimos una función para pintar los servicios después de recuperarlas de nuestra API
+
+
+   window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".custom-navbar");
+      if (window.scrollY > 50) {
+         navbar.classList.add("scrolled");
+      } else {
+         navbar.classList.remove("scrolled");
+      }
+   });
+
+
+
 function pintarServicios(idContenedor, data, mostrarEstrellaDestacado) {
    setTimeout(() => {
        $(idContenedor).empty();
@@ -54,42 +67,45 @@ function pintarServicios(idContenedor, data, mostrarEstrellaDestacado) {
 
            // Comprobamos si el servicio es destacada, y si es destacada le pintamos la estrellita de DESTACADA
            let imgDestacado = "";
+           mostrarEstrellaDestacado = true;
            if (mostrarEstrellaDestacado == true && servicio.destacado != null && (servicio.destacado == 1 || servicio.destacado == "1")) {
-               imgDestacada = "<img src='http://localhost/glamourbnc/assets/img/estrella.webp' class='servicioDestacadoImg'>";
+               imgDestacado = "<img src='http://localhost/glamourbcn/assets/img/estrella.webp' class='servicioDestacadoImg'>";
+              
            }
 
            let servicioHTML = `
-               <div class="col-3">
-                   <div class="card mb-3" style="border-radius: 12px;box-shadow: 1px 1px 3px rgba(0,0,0,0.2);border:4px solid ${ colorCSS }">
-                       <div class="row g-0">
-                           <div class="col-md-4">
-                               <div class="img-fluid contenedor-foto">
-                                   <img src="${ servicio.foto }" class="rounded-start foto-card-servicio">
-                               </div>
-                           </div>
-                           <div class="col-md-8">
-                               <div class="card-body card-servicio">
-                                   <h5 class="card-title">${ servicio.nombre }</h5>
-                                   <p class="card-text">${ descripcionCorta }</p>
-                                   <p class="card-text duracionServicio">${ servicio.duracion } min.</p>
-                                   
-                                   ${ imgDestacada }
-                                   <a href="http://localhost/glamour/servicio.php?id=${ receta.id }" target="_blank" class="btn btn-primary btn-lg btn-verde">Ver Servicio</a>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
+               <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+   <div class="card h-100" style="border-radius: 12px; box-shadow: 1px 1px 3px rgba(0,0,0,0.2); border: 4px solid ${ colorCSS }">
+      <div class="row g-0">
+         <!-- Imagen -->
+         <div class="col-4 d-flex align-items-center">
+            <div class="img-fluid contenedor-foto w-100 p-2">
+               <img src="${ servicio.foto }" class="rounded-start foto-card-servicio w-100" alt="${ servicio.nombre }">
+            </div>
+         </div>
+         <!-- Contenido -->
+         <div class="col-8">
+            <div class="card-body d-flex flex-column justify-content-between h-100">
+               <h5 class="card-title">${ servicio.nombre }</h5>
+               <p class="card-text">${ descripcionCorta }</p>
+               <p class="card-text duracionServicio">${ servicio.duracion } min.</p>
+               ${ imgDestacado }
+               <a href="http://localhost/glamour/servicio.php?id=${ servicio.id }" target="_blank" class="btn btn-dark mt-2">Ver Servicio</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
                `;
                //<p class="card-text ingredientesReceta">${ cantidadingredientes }</p>
 
-           $(idContenedor).append(recetaHTML);
+           $(idContenedor).append(servicioHTML);
        }
    }, 1000);
 }
 
 
-function cargarServiciosDestacadas() {
+function cargarServiciosDestacados() {
    $.ajax({
        url: "http://localhost/glamourbcn/api/public/servicios/destacados",
        type: "GET",
